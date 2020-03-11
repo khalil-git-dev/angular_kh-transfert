@@ -1,0 +1,54 @@
+<p> Creation compte</p>
+un toggle d'activation d'un utulisateur 
+ 
+
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+  </div>
+<div id="wrapper">
+
+    <!-- Appel du Sidebar -->
+    <form [formGroup]="formCreationCompte">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email </label>
+        <input form="email" formControlName="email" class="form-control" placeholder="Exemple@gmail.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password </label>
+        <input type="password" formControlName="password" class="form-control" placeholder="*****" >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nom complet </label>
+        <input form="text" formControlName="username" class="form-control" placeholder="Prenon et Nom">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Adresse</label>
+        <input type="text" formControlName="adresse" class="form-control" placeholder="Adresse">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Telephone</label>
+        <input type="text" formControlName="tel" class="form-control" placeholder="telephone">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Ninea</label>
+        <input type="text" formControlName="ninea" class="form-control" placeholder="Nimea">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Register de Commerce</label>
+        <input type="text" formControlName="rc" class="form-control" placeholder="Register de Commerce">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Montant </label>
+        <input type="text" formControlName="montant" class="form-control" placeholder="Montant depot Initial">
+      </div>
+  
+      <button type="submit" (click)="onSubmitNewCompte()" class="btn btn-primary">Creer le Compte</button>
+    </form>
+  
+  </div>
+
+
+
+  

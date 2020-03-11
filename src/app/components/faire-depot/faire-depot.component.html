@@ -1,0 +1,21 @@
+<p> Creation compte</p>
+<div id="wrapper">
+
+    <!-- Appel du Sidebar -->
+    <form [formGroup]="formulaireDopot">
+        <div class="form-group">
+            <label >Compte </label>
+            <select formControlName="compte" class="form-control">
+              <option value="" selected>*** Votre Compte ***</option>
+              <option value="{{cpt.numero}}" *ngFor="let cpt of comptes">{{cpt.numero+" "+cpt.ninea}}</option>
+            </select>
+        </div>
+      <div class="form-group">
+        <label >Montant depot </label>
+        <input form="text" formControlName="montant" class="form-control" placeholder="Montant depot">
+      </div>
+      
+      <button type="submit" (click)="onSubmitDepo()" class="btn btn-primary">Deposer</button>
+    </form>
+  
+  </div>
